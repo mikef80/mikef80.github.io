@@ -1,1 +1,1 @@
-# mikef80.github.io
+# This is my first big portfolio project, combing HTML, CSS and JS

@@ -1,0 +1,36 @@
+.theme-btn {
+  width: 3em;
+  height: 3em;
+  padding: 0.5em;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.theme-btn img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+:root,
+:root.light {
+  --bg-color: #fff;
+  --text-color: #123;
+}
+ 
+:root.dark {
+  --bg-color: #121212;
+  --text-color: #45ADFE;
+}
+
+:root.grey {
+    --bg-color: #555555;
+    --text-color: #cccccc;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }

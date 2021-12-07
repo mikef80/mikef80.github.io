@@ -6,6 +6,7 @@
   cursor: pointer;
   border: none;
   background-color: transparent;
+  position: absolute;
 }
 
 .theme-btn img {
@@ -18,19 +19,40 @@
 :root.light {
   --bg-color: #fff;
   --text-color: #123;
+  --badge-level1: 0;
+  --badge-level2: 1;
+  --badge-level3: 0;
 }
  
 :root.dark {
   --bg-color: #121212;
   --text-color: #45ADFE;
+  --badge-level1: 0;
+  --badge-level2: 0;
+  --badge-level3: 1;
 }
 
 :root.grey {
-    --bg-color: #555555;
-    --text-color: #cccccc;
+  --bg-color: #555555;
+  --text-color: #cccccc;
+  --badge-level1: 1;
+  --badge-level2: 0;
+  --badge-level3: 0;
 }
 
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
-  }
+}
+
+.theme-btn.light {
+  z-index: var(--badge-level1);
+}
+
+.theme-btn.dark {
+  z-index: var(--badge-level2);
+}
+
+.theme-btn.grey {
+  z-index: var(--badge-level3);
+}

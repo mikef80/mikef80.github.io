@@ -8,14 +8,14 @@
     <title>Mike Francis | Developer</title>
 </head>
 <body>
-    <script>
-        const setTheme = theme => document.documentElement.className = theme;
-    </script>
     <main>
+        <!-- INTRO -->
         <section class="intro">
             <h1>Mike Francis</h1>
             <h2>Full Stack Developer</h2>
         </section>
+
+        <!-- DAY/NIGHT TOGGLE -->
         <section class="test toggle-container">
             <button class="theme-btn light" onclick="setTheme('light')" title="light mode">
                 <!-- Sun icon -->
@@ -30,8 +30,15 @@
                 <img src="/images/cloud-svgrepo-com.svg" alt="">
             </button>
         </section>
+
+        <!-- WELCOME MESSAGE -->
+        <section id="welcome"></section>
+        <section id="welcome1"></section>
+        <section id="welcome2"></section>
+
     </main>
 
-
+    <!-- IMPORT JS SCRIPTS -->
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>

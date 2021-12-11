@@ -24,6 +24,7 @@
   --badge-level1: 0;
   --badge-level2: 1;
   --badge-level3: 0;
+  /* --badge-level4: 0; */
 }
  
 :root.dark {
@@ -32,6 +33,7 @@
   --badge-level1: 0;
   --badge-level2: 0;
   --badge-level3: 1;
+  /* --badge-level4: 0; */
 }
 
 :root.grey {
@@ -40,6 +42,16 @@
   --badge-level1: 1;
   --badge-level2: 0;
   --badge-level3: 0;
+  /* --badge-level4: 0; */
+}
+
+:root.dyslexic {
+  --bg-color: #FFFDD0;
+  --text-color: #00008B;
+  --badge-level1: 0;
+  --badge-level2: 0;
+  --badge-level3: 0;
+  /* --badge-level4: 1; */
 }
 
 body {
@@ -57,4 +69,20 @@ body {
 
 .theme-btn.grey {
   z-index: var(--badge-level3);
+}
+
+/* .theme-btn.dyslexic {
+  z-index: var(--badge-level4);
+} */
+
+/* SITE LAYOUT */
+
+.intro {
+  line-height: 2;
+  font-size: 2rem;
+  padding: 0.25rem 1rem;
+}
+
+.toggle-container {
+  font-size: 1.5rem;
 }

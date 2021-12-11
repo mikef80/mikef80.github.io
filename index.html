@@ -8,35 +8,42 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Mike Francis | Developer</title>
 </head>
-<body>
+<body onload="startTime()">
     <!-- HEADER -->
     <header></header>
-    
+
     <main>
         <!-- INTRO -->
         <section class="intro">
             <h1>Mike Francis</h1>
-            <h2>Full Stack Developer</h2>
+            <!-- <h2>Full Stack Developer</h2> -->
+            <section class="test toggle-container">
+                <button class="theme-btn light" onclick="setTheme('light')" title="light mode">
+                    <!-- Sun icon -->
+                    <img src="/images/sun-svgrepo-com.svg" alt="">
+                </button>
+                <button class="theme-btn dark" onclick="setTheme('dark')" title="dark mode">
+                    <!-- Moon icon -->
+                    <img src="/images/moon-svgrepo-com.svg" alt="">
+                </button>
+                <button class="theme-btn grey" onclick="setTheme('grey')" title="grey mode">
+                    <!-- Moon icon -->
+                    <img src="/images/cloud-svgrepo-com.svg" alt="">
+                </button>
+                <!-- <button class="theme-btn grey" onclick="setTheme('dyslexic')" title="dyslexic mode">
+                    Moon icon
+                    <img src="/images/" alt="">
+                </button> -->
+            </section>
         </section>
 
         <!-- DAY/NIGHT TOGGLE -->
-        <section class="test toggle-container">
-            <button class="theme-btn light" onclick="setTheme('light')" title="light mode">
-                <!-- Sun icon -->
-                <img src="/images/sun-svgrepo-com.svg" alt="">
-            </button>
-            <button class="theme-btn dark" onclick="setTheme('dark')" title="dark  mode">
-                <!-- Moon icon -->
-                <img src="/images/moon-svgrepo-com.svg" alt="">
-            </button>
-            <button class="theme-btn grey" onclick="setTheme('grey')" title="grey  mode">
-                <!-- Moon icon -->
-                <img src="/images/cloud-svgrepo-com.svg" alt="">
-            </button>
-        </section>
+        
 
         <!-- WELCOME MESSAGE -->
         <section id="time-greeting"></section>
+
+        <section id="startTime"></section>
 
         <section id="welcome"></section>
         <section id="welcome1"></section>

@@ -77,3 +77,23 @@ body {
 
 /* SITE LAYOUT */
 
+/* GLOBAL */
+
+.container {
+  display: flex;
+}
+
+.content {
+  max-width: 1000px;
+}
+
+/* HEADER */
+
+/* MAIN */
+
+  /* INTRO */
+
+
+  /* SKILLS */
+
+/* FOOTER */

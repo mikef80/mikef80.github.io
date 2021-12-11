@@ -81,19 +81,67 @@ body {
 
 .container {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .content {
   max-width: 1000px;
 }
 
+.space-between {
+  justify-content: space-between;
+}
+
+.center {
+  justify-content: center;
+  text-align: center;
+}
+
 /* HEADER */
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #ffffff;
+}
 
 /* MAIN */
 
+main {
+  margin: 0 20%;
+  margin-top: 72px;
+  margin-bottom: 49px;
+}
+
   /* INTRO */
 
+  .intro {
+    padding: 1rem 0;
+  }
 
   /* SKILLS */
 
+  .icons {
+    padding: 20px;
+    font-size: 40px;
+  }
+
+  /* PORTFOLIO */
+
+  .example {
+    max-width: 200px;
+    margin: 20px 50px;
+  }
+
 /* FOOTER */
+
+footer {
+  border-top: 1px solid black;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #ffffff;
+}
+

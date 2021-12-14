@@ -104,15 +104,17 @@ header {
   top: 0;
   width: 100%;
   text-align: center;
-  background-color: #ffffff;
-  border-bottom: 1px solid black;
+  background-color: var(--bg-color);
+  /* background-color: #ffffff; */
+  /* border-bottom: 1px solid black; */
+  border-bottom: 1px solid var(--text-color);
   height: 11.25rem;
   /* overflow: hidden; */
 }
 
 #startTime {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 5rem;
+  font-size: 1rem;
 }
 
 /* MAIN */
@@ -150,11 +152,13 @@ main {
 /* FOOTER */
 
 footer {
-  border-top: 1px solid black;
+  /* border-top: 1px solid black; */
+  border-top: 1px solid var(--text-color);
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #ffffff;
+  background-color: var(--bg-color);
+  /* background-color: #ffffff; */
   height: 3rem;
 }
 

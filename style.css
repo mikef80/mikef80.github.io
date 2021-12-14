@@ -6,7 +6,7 @@
   cursor: pointer;
   border: none;
   background-color: transparent;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
 }
@@ -105,6 +105,9 @@ header {
   width: 100%;
   text-align: center;
   background-color: #ffffff;
+  border-bottom: 1px solid black;
+  height: 11.25rem;
+  /* overflow: hidden; */
 }
 
 #startTime {
@@ -116,8 +119,12 @@ header {
 
 main {
   margin: 0 20%;
-  margin-top: 72px;
-  margin-bottom: 49px;
+  /* padding-top: 200px;
+  padding-bottom: 100px; */
+  /* height: calc(100vh - 14.25rem);
+  overflow: scroll; */
+  padding-top: 11.25rem;
+  padding-bottom: 3rem;
 }
 
   /* INTRO */
@@ -148,5 +155,6 @@ footer {
   bottom: 0;
   width: 100%;
   background-color: #ffffff;
+  height: 3rem;
 }
 

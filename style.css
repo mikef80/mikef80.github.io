@@ -92,6 +92,10 @@ body {
   justify-content: space-between;
 }
 
+.space-around {
+  justify-content: space-around;
+}
+
 .center {
   justify-content: center;
   text-align: center;
@@ -108,7 +112,7 @@ header {
   /* background-color: #ffffff; */
   /* border-bottom: 1px solid black; */
   border-bottom: 1px solid var(--text-color);
-  height: 11.25rem;
+  height: 15rem;
   /* overflow: hidden; */
 }
 
@@ -117,21 +121,33 @@ header {
   font-size: 5rem;
 }
 
+#siteNav {
+  justify-content: center;
+}
+
+#siteNav ul {
+  list-style: none;
+}
+
+#siteNav ul li {
+  padding: 20px 10px;
+}
+
 /* MAIN */
 
 main {
-  margin: 0 20%;
+  margin: 0 auto;
   /* padding-top: 200px;
   padding-bottom: 100px; */
   /* height: calc(100vh - 14.25rem);
   overflow: scroll; */
-  padding-top: 11.25rem;
+  padding-top: 15rem;
   padding-bottom: 3rem;
 }
 
   /* INTRO */
 
-  .intro {
+  #intro {
     padding: 1rem 0;
   }
 
@@ -152,17 +168,22 @@ main {
   /* PORTFOLIO */
 
   .example {
-    max-width: 200px;
+    max-width: 400px;
     margin: 20px 50px;
+    justify-content: center;
+  }
+
+  .example p {
+    text-align: justify;
   }
 
 /* FOOTER */
 
-footer {
+#info {
   /* border-top: 1px solid black; */
   border-top: 1px solid var(--text-color);
-  position: fixed;
-  bottom: 0;
+  /* position: fixed; */
+  /* bottom: 0; */
   width: 100%;
   background-color: var(--bg-color);
   /* background-color: #ffffff; */

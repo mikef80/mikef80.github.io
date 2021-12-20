@@ -55,7 +55,7 @@
 }
 
 html {
-  scroll-padding-top: 16rem;
+  scroll-padding-top: 16rem; /* This line is absolute gold! how to deal with content vanishing behind a fixed heading/nav bar */
 }
 
 body {

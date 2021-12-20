@@ -54,9 +54,14 @@
   /* --badge-level4: 1; */
 }
 
+html {
+  scroll-padding-top: 16rem;
+}
+
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
+    
 }
 
 .theme-btn.light {

@@ -173,6 +173,11 @@ main {
 
   /* PORTFOLIO */
 
+  .demo_sites {
+    text-decoration: none;
+    color: black;
+  }
+
   .example {
     max-width: 400px;
     /* margin: 20px 50px; */
@@ -181,35 +186,25 @@ main {
     border-radius: 5px;
     padding: 1rem;
     position: relative;
+    align-items: center;
   }
 
-  .example p {
-    text-align: justify;
-    padding: 1rem 1rem;
-  }
-
-  .example h4, .example p {
+  .example .highlight {
     position: absolute;
     visibility: hidden;
   }
 
-
-  .example:hover h4, .example:hover p {
-    position: absolute;
+  .example:hover .highlight {
     visibility: visible;
-    transition: 0.5s;
   }
-
-
 
   .example:hover img {
-    opacity: 100%;
+    opacity: 30%;
     transition: 0.5s;
   }
 
-  .demo_sites {
-    text-decoration: none;
-    color: black;
+  .highlight * {
+    padding: 1.5rem 0;;
   }
 
 /* FOOTER */

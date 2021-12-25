@@ -192,15 +192,22 @@ main {
   .example .highlight {
     position: absolute;
     visibility: hidden;
+    transition: visibility 0.5s;
   }
 
   .example:hover .highlight {
     visibility: visible;
+    transition: visibility 0.5s;
   }
 
   .example:hover img {
     opacity: 30%;
-    transition: 0.5s;
+    transition: opacity 0.5s;
+  }
+
+  .example img {
+    opacity: 100%;
+    transition: opacity 0.5s;
   }
 
   .highlight * {

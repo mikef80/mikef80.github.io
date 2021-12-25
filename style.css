@@ -127,6 +127,10 @@ header {
   display: none;
 }
 
+#time-greeting {
+  display: none;
+}
+
 #siteNav {
   justify-content: center;
 }

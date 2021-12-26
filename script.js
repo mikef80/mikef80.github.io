@@ -51,6 +51,3 @@ output.innerHTML = slider.value;
 gallerySize.oninput = function () {
   output.innerHTML = this.value;
 }
-
-let varwidth = document.getElementsByClassName('example').max-width;
-output.innerHTML = varwidth.value;

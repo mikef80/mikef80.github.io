@@ -37,7 +37,17 @@ function checkTime(i) {
 
 // TEST JS CODE
 
-var test = "this is a test";
-document.getElementById('welcome').innerHTML = '<p>Hello!</p>';
+/* var test = "this is a test";
+document.getElementById('welcome').innerHTML = 'Hello!';
 document.getElementById('welcome1').innerHTML = test;
-document.getElementById('welcome2').innerHTML = `The test variable says "${test}".`;
+document.getElementById('welcome2').innerHTML = `The test variable says "${test}".`; */
+
+// GALLERY SLIDER
+
+let slider = document.getElementById("gallerySize");
+let output = document.getElementById("output");
+output.innerHTML = slider.value;
+
+gallerySize.oninput = function () {
+  output.innerHTML = this.value;
+}

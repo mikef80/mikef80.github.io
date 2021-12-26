@@ -119,6 +119,7 @@ header {
   border-bottom: 1px solid var(--text-color);
   height: 7rem;
   /* overflow: hidden; */
+  z-index: 1;
 }
 
 #startTime {
@@ -183,8 +184,8 @@ main {
   }
 
   .example {
-    max-width: 400px;
-    /* margin: 20px 50px; */
+    max-width: 700px;
+    margin: 20px 50px;
     justify-content: center;
     border: 1px solid black;
     border-radius: 5px;
@@ -197,6 +198,7 @@ main {
     position: absolute;
     visibility: hidden;
     transition: visibility 0.5s;
+    justify-content: center;
   }
 
   .example:hover .highlight {
@@ -215,7 +217,7 @@ main {
   }
 
   .highlight * {
-    padding: 1.5rem 0;;
+    padding: 1rem 1rem;
   }
 
 /* FOOTER */

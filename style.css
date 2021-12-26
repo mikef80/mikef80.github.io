@@ -9,6 +9,7 @@
   position: fixed;
   top: 0;
   right: 0;
+  z-index: 2;
 }
 
 .theme-btn img {
@@ -181,10 +182,11 @@ main {
   .demo_sites {
     text-decoration: none;
     color: black;
+    /* z-index: -1; */
   }
 
   .example {
-    max-width: 700px;
+    max-width: 500px;
     margin: 20px 50px;
     justify-content: center;
     border: 1px solid black;

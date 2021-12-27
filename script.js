@@ -46,9 +46,11 @@ document.getElementById('welcome2').innerHTML = `The test variable says "${test}
 
 let slider = document.getElementById("gallerySize");
 let output = document.getElementById("output");
+let galSize = document.getElementById("pic1");
 // output.innerHTML = slider.value;
 
 gallerySize.oninput = function () {
-  output.innerHTML = `${this.value}rem`;
-  output.style.fontSize = `${this.value}rem`;
+  output.innerHTML = `${this.value}px`;
+  // output.style.fontSize = `${this.value}rem`;
+  galSize.style.maxWidth = `${this.value}px`;
 }

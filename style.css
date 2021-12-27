@@ -186,7 +186,7 @@ main {
   }
 
   .example {
-    width: 500px;
+    max-width: 500px;
     margin: 20px 50px;
     justify-content: center;
     border: 1px solid black;

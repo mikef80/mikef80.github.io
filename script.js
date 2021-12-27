@@ -44,14 +44,11 @@ document.getElementById('welcome2').innerHTML = `The test variable says "${test}
 
 // GALLERY SLIDER
 
-/* let slider = document.getElementById("gallerySize");
+let slider = document.getElementById("gallerySize");
 let output = document.getElementById("output");
-output.innerHTML = slider.value;
+// output.innerHTML = slider.value;
 
 gallerySize.oninput = function () {
-  output.innerHTML = this.value;
-} */
-
-let display = document.getElementById("output");
-let widthd = document.getElementById("pic1");
-output.innerHTML = widthd.value;
+  output.innerHTML = `${this.value}rem`;
+  output.style.fontSize = `${this.value}rem`;
+}

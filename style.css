@@ -55,6 +55,10 @@
   /* --badge-level4: 1; */
 }
 
+:root.gallery {
+  --galWidth: 500px;
+}
+
 html {
   scroll-padding-top: 16rem; /* This line is absolute gold! how to deal with content vanishing behind a fixed heading/nav bar */
 }
@@ -186,7 +190,8 @@ main {
   }
 
   .example {
-    max-width: 500px;
+    /* max-width: var(--galWidth); */
+    max-width: 400px;
     margin: 20px 50px;
     justify-content: center;
     border: 1px solid black;

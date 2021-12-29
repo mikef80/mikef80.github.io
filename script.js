@@ -46,11 +46,18 @@ document.getElementById('welcome2').innerHTML = `The test variable says "${test}
 
 let slider = document.getElementById("gallerySize");
 let output = document.getElementById("output");
-let galSize = document.getElementById("pic1");
-// output.innerHTML = slider.value;
+let test = document.getElementsByClassName("pics")
+
+output.innerHTML = `${slider.value}px`;
+
+
+/* gallerySize.oninput = function () {
+  output.innerHTML = `${this.value}px`;
+  galSize.style.maxWidth = `${this.value}px`;
+} */
 
 gallerySize.oninput = function () {
-  output.innerHTML = `${this.value}px`;
-  // output.style.fontSize = `${this.value}rem`;
-  galSize.style.maxWidth = `${this.value}px`;
+  for (let i = 0; i < pics.length; i++) {
+    pics[i].style.width =  gallerySize.value;
+  }
 }

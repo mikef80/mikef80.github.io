@@ -102,6 +102,11 @@ body {
   max-width: 1000px;
 }
 
+.content a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
 .space-between {
   justify-content: space-between;
 }
@@ -133,7 +138,7 @@ header {
 
 #startTime {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 5rem;
+  font-size: 1rem;
   display: none;
 }
 
@@ -143,6 +148,11 @@ header {
 
 #siteNav {
   justify-content: center;
+}
+
+#siteNav a {
+  text-decoration: none;
+  color: var(--text-color);
 }
 
 #siteNav ul {
@@ -189,13 +199,13 @@ main {
 
   .demo_sites {
     text-decoration: none;
-    color: black;
+    color: var(--text-color);
     /* z-index: -1; */
   }
 
   .example {
     /* max-width: var(--galWidth); */
-    max-width: 400px;
+    max-width: 380px;
     margin: 20px 50px;
     justify-content: center;
     border: 1px solid black;
@@ -203,6 +213,14 @@ main {
     padding: 1rem;
     position: relative;
     align-items: center;
+    transition: 0.5s;
+    background-color: #ffffff;
+  }
+
+  .example:hover {
+    max-width: 400px;
+    transition: 0.5s;
+    margin: 20px 40px;
   }
 
   .example .highlight {
@@ -215,6 +233,7 @@ main {
   .example:hover .highlight {
     visibility: visible;
     transition: visibility 0.5s;
+    
   }
 
   .example:hover img {
@@ -229,6 +248,7 @@ main {
 
   .highlight * {
     padding: 1rem 1rem;
+    color: #112233;
   }
 
 /* FOOTER */
@@ -247,5 +267,14 @@ main {
 
 #info section {
   align-content: center;
+}
+
+#info a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+#info ul {
+  padding-inline-start: 20px;
 }
 

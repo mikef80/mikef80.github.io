@@ -9,9 +9,7 @@
     <script src="https://kit.fontawesome.com/9d17d6bd20.js" crossorigin="anonymous"></script>
     <title>Mike Francis | Developer</title>
 </head>
-<body onload="startTime()">
-    
-    
+<body>
     
     <!-- HEADER -->
     <header>
@@ -76,8 +74,8 @@
         <section id="portfolio">
             <section>
                 <h3 class="full-width">Portfolio</h3>
-                <input type="range" min="100" max="800" value="500" step="1" class="slider" id="gallerySize">
-                <h3 id="output"></h3>
+                <!-- <input type="range" min="100" max="800" value="500" step="1" class="slider" id="gallerySize">
+                <h3 id="output"></h3> -->
                 <section class="container space-around">
                     <a href="https://mikef80.github.io/CAResponsive_Club_Website" target="_blank" class="demo_sites">
                         <section class="example container" class="pics">
@@ -97,15 +95,6 @@
                             <img src="./images/Company_Homepage.jpg" alt="">
                         </section>
                     </a>
-                    <a href="https://mikef80.github.io/CACompany_Home_Page" target="_blank" class="demo_sites">
-                        <section class="example container">
-                            <div class="highlight container">
-                                <h4>Company Homepage</h4>
-                                <p>A rebuild of Surfers Against Sewage website for Codecademy course.</p>
-                            </div>
-                            <img src="./images/Company_Homepage.jpg" alt="">
-                        </section>
-                    </a>
                 </section>
             </section>
         </section>
@@ -114,17 +103,18 @@
     
     <!-- FOOTER -->
     <footer id="info" class="container space-between">
-        <section>Copyright MF 2021</section>
-        <section>
+        <!-- <section class="container" id="copyright">Copyright MF 2021</section> -->
+        <section class="container" id="copyright"></section>
+        <section class="container">
             <ul>
-                <li>Contact Me</li>
-                <li>View on Github</li>
+                <li><a href="mailto:mike@mike-francis.org">Contact Me</a></li>
+                <li><a href="https://github.com/mikef80/mikef80.github.io">View on Github</a></li>
             </ul>
         </section>
     </footer>
     
 
     <!-- IMPORT JS SCRIPTS -->
-    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="/script.js"></script>
 </body>
 </html>

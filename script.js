@@ -50,14 +50,19 @@ let test = document.getElementsByClassName("pics")
 
 output.innerHTML = `${slider.value}px`;
 
-
-/* gallerySize.oninput = function () {
-  output.innerHTML = `${this.value}px`;
-  galSize.style.maxWidth = `${this.value}px`;
-} */
-
 gallerySize.oninput = function () {
   for (let i = 0; i < pics.length; i++) {
     pics[i].style.width =  gallerySize.value;
   }
 }
+
+// GET CURRENT YEAR
+
+const currentYear = () => {
+  const year = new Date().getFullYear();
+  console.log(year);
+
+  const d = new Date();
+  let year2 = d.getFullYear();
+  console.log(year2)
+;}

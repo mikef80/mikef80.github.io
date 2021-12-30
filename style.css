@@ -198,6 +198,7 @@ main {
   /* PORTFOLIO */
 
   .demo_sites {
+    /* margin: 20px 50px; */
     text-decoration: none;
     color: var(--text-color);
     /* z-index: -1; */
@@ -206,7 +207,6 @@ main {
   .example {
     /* max-width: var(--galWidth); */
     max-width: 380px;
-    margin: 20px 50px;
     justify-content: center;
     border: 1px solid black;
     border-radius: 5px;
@@ -220,7 +220,7 @@ main {
   .example:hover {
     max-width: 400px;
     transition: 0.5s;
-    margin: 20px 40px;
+    /* margin: 20px 40px; */
   }
 
   .example .highlight {

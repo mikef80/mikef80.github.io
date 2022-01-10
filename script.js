@@ -3,7 +3,7 @@ const setTheme = theme => document.documentElement.className = theme;
 
 // TIME SENSITIVE WELCOME MESSAGE
 
-/* var today = new Date();
+var today = new Date();
 var time = new Date().toLocaleTimeString();
 var greeting = document.getElementById('time-greeting');
 
@@ -14,11 +14,11 @@ if (time < '12:00:00') {
 } else {
     greeting.innerHTML = `Good Evening! It's ${time}`;
     setTheme('dark');
-} */
+}
 
 // CLOCK FUNCTION
 
-/* function startTime() {
+function startTime() {
   const today = new Date();
   let h = today.getHours();
   let m = today.getMinutes();
@@ -32,7 +32,7 @@ if (time < '12:00:00') {
 function checkTime(i) {
   if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
   return i;
-} */
+}
 
 // GET CURRENT YEAR
 

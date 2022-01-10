@@ -18,7 +18,7 @@ if (time < '12:00:00') {
 
 // CLOCK FUNCTION
 
-function startTime() {
+/* function startTime() {
   const today = new Date();
   let h = today.getHours();
   let m = today.getMinutes();
@@ -32,7 +32,7 @@ function startTime() {
 function checkTime(i) {
   if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
   return i;
-}
+} */
 
 // GET CURRENT YEAR
 

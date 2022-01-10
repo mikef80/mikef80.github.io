@@ -40,7 +40,7 @@ function checkTime(i) {
 
 const currentYear = () => {
   let yearNow = new Date().getFullYear();
-  document.getElementById('copyright').innerHTML = `<ul><li>Copyright Mike Francis ${yearNow}</li></ul>`;
+  document.getElementById('copyright').innerHTML = `&copy; ${yearNow} Mike Francis`;
 ;}
 
 currentYear();

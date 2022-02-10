@@ -14,3 +14,12 @@
 .section-header:after {
     content: " />";
 } 
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.col {
+  border: 1px solid black;
+}

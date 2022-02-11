@@ -3,7 +3,6 @@
 * {
     border: 0;
     margin: 0;
-    box-sizing: border-box;
     font-family: 'Fira Sans',sans-serif;
 }
 
@@ -15,11 +14,11 @@
     content: " />";
 } 
 
-a {
+a,a:hover {
   text-decoration: none;
   color: black;
 }
 
-.col-3 {
+.portItem {
   border: 1px solid black;
 }

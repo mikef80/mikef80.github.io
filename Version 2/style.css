@@ -4,6 +4,7 @@
     border: 0;
     margin: 0;
     font-family: 'Fira Sans',sans-serif;
+    word-wrap: break-word;
 }
 
 .section-header:before {
@@ -21,4 +22,8 @@ a,a:hover {
 
 .portItem {
   border: 1px solid black;
+}
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  width: 90%;
 }

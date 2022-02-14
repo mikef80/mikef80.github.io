@@ -1,5 +1,9 @@
 // ASYNC AWAIT BOILERPLATE
 
+const buildHTML = () => {
+    let output = [];
+}
+
 const insertChild = (input) => {
     input.items.forEach(element => {
         console.log(element.name);

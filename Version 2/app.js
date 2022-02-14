@@ -48,7 +48,7 @@ const insertChild = async i => {
   const div = document.createElement('div');
   div.classList.add('col-xl-3', 'col-md-4', 'col-sm-6', 'col-xs-9','portItem', 'p-3', 'rounded');
   output.push(`<a href="${url}" target="_blank">
-                <h4>${name}</h4>
+                <h5>${name}</h5>
                 <h6>Last updated: ${updated}</h6>
                 <p>`)
   // console.log('CHECK ONE: ' + output); //CHECK ONE

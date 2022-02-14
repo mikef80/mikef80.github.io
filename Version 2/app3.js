@@ -9,6 +9,7 @@ const buildLangs = async (url) => {
             const array = Object.entries(jsonResponse);
             let output1 = [];
             let output2 = [];
+            
             let length = array.length;
             
             output1.push(`<p>`);
@@ -58,7 +59,7 @@ const buildHTML = async (input) => {
     // let breakdown = langsBreakdown();
 
     output.push(`<a href="${url}" target="_blank">
-                    <h4>${name}</h4>
+                    <h5>${name}</h5>
                     <h6>Last updated: ${updated}</h6>
                     <p>${langs[0]}</p>
                     <p>${langs[1]}</p>
@@ -86,6 +87,12 @@ const getRepos = async () => {
     // const url = 'https://api.github.com/users/mikef80/repos';
     const repoName = 'CA-';
     const url = `https://api.github.com/search/repositories?q=user:mikef80+CA+in:name+sort:updated`;
+    /* const url = {
+        url: `https://api.github.com/search/repositories?q=user:mikef80+CA+in:name+sort:updated`,
+        headers: {
+            'User-agent': 'mikef80'
+        }
+    } */
 
     try {
         const response = await fetch(url);

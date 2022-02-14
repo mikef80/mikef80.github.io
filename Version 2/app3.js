@@ -9,7 +9,22 @@ const buildLangs = async (url) => {
             const array = Object.entries(jsonResponse);
             let output1 = [];
             let output2 = [];
-            
+
+
+
+            let total = 0;
+            // console.log(array[0][1]);
+
+            array.forEach(item => {
+                // console.log(item[1]);
+                total += item[1];
+            })
+
+            console.log(total);
+
+
+
+
             let length = array.length;
             
             output1.push(`<p>`);
@@ -18,7 +33,7 @@ const buildLangs = async (url) => {
             array.forEach((item) => {              
               const index = array.indexOf(item);              
               output1.push(`${item[0]}`);
-              output2.push(`${item[0]}: ${item[1]}`);
+              output2.push(`${item[0]}: ${Math.round((item[1] / total) * 100)}%`);
               
               if (index < length - 1) {
                 output1.push(` + `);

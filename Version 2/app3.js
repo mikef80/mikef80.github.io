@@ -10,20 +10,11 @@ const buildLangs = async (url) => {
             let output1 = [];
             let output2 = [];
 
-
-
             let total = 0;
-            // console.log(array[0][1]);
 
             array.forEach(item => {
-                // console.log(item[1]);
                 total += item[1];
             })
-
-            console.log(total);
-
-
-
 
             let length = array.length;
             
@@ -59,7 +50,6 @@ const buildLangs = async (url) => {
 // NEED TO INCLUDE LANGUAGES YET
 const buildHTML = async (input) => {
     let output = [];
-    // console.log(input);
     
     let url = input.html_url;
     let name = input.name;
@@ -70,19 +60,15 @@ const buildHTML = async (input) => {
     div.classList.add('col-xl-3', 'col-md-4', 'col-sm-6', 'col-xs-9','portItem', 'p-3', 'rounded');
 
     let langs = await buildLangs(langsURL);
-    
-    // let breakdown = langsBreakdown();
 
     output.push(`<a href="${url}" target="_blank">
                     <h5>${name}</h5>
                     <h6>Last updated: ${updated}</h6>
                     <p>${langs[0]}</p>
-                    <p>${langs[1]}</p>
-                    
+                    <p>${langs[1]}</p>           
                 </a>`);
 
     div.innerHTML = output.join('');
-    // console.log(div);
 
     return div;
 }
@@ -93,7 +79,6 @@ const insertChild = (input) => {
 
     input.items.forEach(async element => {
         let output = await buildHTML(element);
-        // console.log(output);
         portItems.appendChild(output);
     });
 }
@@ -113,11 +98,7 @@ const getRepos = async () => {
         const response = await fetch(url);
         if (response.ok) {
             const jsonResponse = await response.json();
-            // Code to execute with jsonResponse
-            // console.log(jsonResponse); //USE TO CHECK RAW JSON RESPONSE
-
             insertChild(jsonResponse);
-
         }
     } catch (error) {
         console.log(error);

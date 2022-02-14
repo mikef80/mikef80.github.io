@@ -6,13 +6,33 @@ const buildLangs = async (url) => {
         const response = await fetch(url);
         if (response.ok) {
             const jsonResponse = await response.json();
-            let output = [];
-            
             const array = Object.entries(jsonResponse);
-            output.push(`<p>${array}</p>`)
-            console.log(output.join(''));
-            return output.join('');
+            let output1 = [];
+            let output2 = [];
+            let length = array.length;
+            
+            output1.push(`<p>`);
+            output2.push(`<p>`);
 
+            array.forEach((item) => {              
+              const index = array.indexOf(item);              
+              output1.push(`${item[0]}`);
+              output2.push(`${item[0]}: ${item[1]}`);
+              
+              if (index < length - 1) {
+                output1.push(` + `);
+                output2.push(` | `);
+              }
+            })
+            output1.push(`</p>`);
+            output2.push(`</p>`);
+
+            output1 = output1.join('');
+            output2 = output2.join('');
+
+            const finalOutput = [output1,output2];
+
+            return finalOutput; 
         }
     } catch (error) {
         console.log(error);
@@ -23,7 +43,7 @@ const buildLangs = async (url) => {
 // NEED TO INCLUDE LANGUAGES YET
 const buildHTML = async (input) => {
     let output = [];
-    console.log(input);
+    // console.log(input);
     
     let url = input.html_url;
     let name = input.name;
@@ -40,7 +60,8 @@ const buildHTML = async (input) => {
     output.push(`<a href="${url}" target="_blank">
                     <h4>${name}</h4>
                     <h6>Last updated: ${updated}</h6>
-                    <p>${langs}</p>
+                    <p>${langs[0]}</p>
+                    <p>${langs[1]}</p>
                     
                 </a>`);
 
@@ -64,7 +85,7 @@ const insertChild = (input) => {
 const getRepos = async () => {
     // const url = 'https://api.github.com/users/mikef80/repos';
     const repoName = 'CA-';
-    const url = `https://api.github.com/search/repositories?q=user:mikef80+CAR+in:name+sort:updated`;
+    const url = `https://api.github.com/search/repositories?q=user:mikef80+CA+in:name+sort:updated`;
 
     try {
         const response = await fetch(url);

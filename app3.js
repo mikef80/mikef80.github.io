@@ -61,6 +61,7 @@ const buildHTML = async (input) => {
   };
   let updated = new Date(input.updated_at).toLocaleString("en-GB", options);
   const div = document.createElement("div");
+  /* div.classList.add('g-col-xl-3', 'g-col-md-4', 'g-col-sm-6', 'g-col-xs-9','portItem', 'p-3', 'rounded'); */
   div.classList.add(
     "col-xl-3",
     "col-md-4",

@@ -2,19 +2,17 @@ import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 
-import Home from "./Pages/Home";
-import About from "./Pages/About";
-import Contact from "./Pages/Contact";
-import Error from "./Pages/Error";
+import Home from "./components/Home/Home";
+import About from "./components/About/About";
+import Contact from "./components/Contact/Contact";
+import Error from "./components/Error/Error";
+import NavBar from "./components/NavBar/NavBar";
 
 function App() {
   return (
     <Router>
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/contact">Contact</Link>
-        </nav>
+      <NavBar />
+      <p className="text-5xl text-red-500">test</p>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

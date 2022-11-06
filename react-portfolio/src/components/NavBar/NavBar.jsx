@@ -1,21 +1,37 @@
 import { Link, NavLink } from "react-router-dom";
 
 const NavBar = () => {
-  /* let activeStyle = {
-    color: 'red',
-  }; */
+  const menuItemActive = "bg-gray-400 flex-1 py-1";
+  const menuItemInactive = "bg-gray-300 flex-1 py-1";
+  const bg = "";
 
   return (
-    <nav>
+    <nav className="w-full flex flex-justify">
       <NavLink
         to="/"
-        className={({ isActive }) => (isActive ? "text-red-500" : undefined)}
+        className={({ isActive }) =>
+          isActive ? menuItemActive : menuItemInactive
+        }
       >
         Home
       </NavLink>
 
-      <Link to="/about">About</Link>
-      <Link to="/contact">Contact</Link>
+      <NavLink
+        to="/about"
+        className={({ isActive }) =>
+          isActive ? menuItemActive : menuItemInactive
+        }
+      >
+        About
+      </NavLink>
+      <NavLink
+        to="/contact"
+        className={({ isActive }) =>
+          isActive ? menuItemActive : menuItemInactive
+        }
+      >
+        Contact
+      </NavLink>
     </nav>
   );
 };

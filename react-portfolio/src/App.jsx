@@ -12,7 +12,6 @@ function App() {
   return (
     <Router>
       <NavBar />
-      <p className="text-5xl text-red-500">test</p>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

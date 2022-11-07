@@ -7,10 +7,12 @@ import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
 import Error from "./components/Error/Error";
 import NavBar from "./components/NavBar/NavBar";
+import Header from "./components/Header/Header";
 
 function App() {
   return (
     <Router>
+      <Header />
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />

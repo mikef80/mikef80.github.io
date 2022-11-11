@@ -99,8 +99,11 @@ const insertChild = (input) => {
 const getRepos = async () => {
   // const url = 'https://api.github.com/users/mikef80/repos';
   const repoName = "CA-";
+  const queryString = "q=" + encodeURIComponent("user:mikef80 portfolio NOT CA in:name");
+    // encodeURIComponent("CA in:name");
   // const url = `https://api.github.com/search/repositories?q=user:mikef80+CA+in:name+sort:updated`;
-  const url = `https://api.github.com/search/repositories?q=user:mikef80+sort:updated`;
+  // const url = `https://api.github.com/search/repositories?q=user:mikef80+sort:updated+name:repoName`; //THIS ONE WORKS
+  const url = `https://api.github.com/search/repositories?${queryString}+sort:updated`;
   /* const url = {
         url: `https://api.github.com/search/repositories?q=user:mikef80+CA+in:name+sort:updated`,
         headers: {

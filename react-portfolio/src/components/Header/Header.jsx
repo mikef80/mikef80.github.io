@@ -1,6 +1,9 @@
 const Header = () => {
   return (
-    <div>Header</div>
+    <div class="text-left">
+      <h1>Mike Francis</h1>
+      <h2>developer (/dɪˈvel.ə.pər/)</h2>
+    </div>
   )
 }
 

@@ -6,7 +6,7 @@ const NavBar = () => {
   const bg = "";
 
   return (
-    <nav className="w-full flex flex-justify">
+    <nav className="w-full flex flex-justify relative top-0 left-0">
       <NavLink
         to="/"
         className={({ isActive }) =>
@@ -17,12 +17,12 @@ const NavBar = () => {
       </NavLink>
 
       <NavLink
-        to="/about"
+        to="/projects"
         className={({ isActive }) =>
           isActive ? menuItemActive : menuItemInactive
         }
       >
-        About
+        Projects
       </NavLink>
       <NavLink
         to="/contact"

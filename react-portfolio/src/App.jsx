@@ -14,12 +14,14 @@ function App() {
     <Router>
       <Header />
       <NavBar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact/:email" element={<Contact />} />
-        <Route path="*" element={<Error />} />
-      </Routes>
+      <main className="px-3 py-3">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact/:email" element={<Contact />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </main>
       <footer>&copy; 2022 Mike Francis</footer>
     </Router>
   );

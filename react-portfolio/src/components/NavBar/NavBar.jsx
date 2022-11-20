@@ -6,7 +6,7 @@ const NavBar = () => {
   const bg = "";
 
   return (
-    <nav className="w-full flex flex-justify relative top-0 left-0">
+    <nav className="w-full flex flex-justify relative top-0">
       <NavLink
         to="/"
         className={({ isActive }) =>

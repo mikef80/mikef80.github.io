@@ -36,6 +36,13 @@ const Projects = () => {
           text="This is another project description"
         />
       </SwiperSlide>
+      <SwiperSlide>
+        <ProjectCard
+          title="Project3"
+          img="https://via.placeholder.com/400x200"
+          text="This is, again, another project description"
+        />
+      </SwiperSlide>
     </Swiper>
   );
 };

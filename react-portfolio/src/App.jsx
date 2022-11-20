@@ -6,15 +6,13 @@ import Home from "./components/Home/Home";
 import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
 import Error from "./components/Error/Error";
-import NavBar from "./components/NavBar/NavBar";
 import Header from "./components/Header/Header";
 
 function App() {
   return (
     <Router>
       <Header />
-      <NavBar />
-      <main className="px-3 py-3">
+      <main className="px-3 pb-3">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />

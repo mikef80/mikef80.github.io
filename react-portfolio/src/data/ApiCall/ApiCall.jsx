@@ -9,13 +9,13 @@ const ApiCall = () => {
   try {
     fetch(`https://api.github.com/search/repositories?${queryString}`)
       .then((response) => response.json())
-      .then((data) => {
+      /* .then((data) => {
         let repos = data;
 
         repos.map((repo) => {
           items.push({ name: repo.name,  });
         });
-      });
+      }); */
   } catch (error) {
     console.log(error);
   }

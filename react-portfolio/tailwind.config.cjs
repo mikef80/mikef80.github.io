@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        "mob-landscape": { raw: "(orientation: landscape)" },
+        "mob-landscape": { raw: "(orientation: landscape) and (max-height:450px)" },
       },
     },
   },

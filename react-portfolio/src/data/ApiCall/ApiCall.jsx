@@ -4,26 +4,27 @@ const ApiCall = (stuff) => {
 
   let items = [];
 
-  // console.log('props:' + setState);
-
   try {
     fetch(baseURL + queryString)
       .then(response => response.json())
-    // .then(result => console.log(result.items[0]))
       .then(result => {
         let array = result.items;
         array.forEach(item => {
+          // console.log(item);
+
           let object = {
             name: item.name,
-            url: item.html_url,
-            description: item.description
-          }
+            description: item.description,
+            url: item.svn_url
+          };
+
           // console.log(object);
-          // stuff(object)
-          console.log(object);
-          stuff(object)
+          items.push(object)
+        });
+
+        console.log(items);
       })
-      })
+      .then(console.log(typeof stuff))
     
   } catch (error) {
     console.log(`error: ${error}`);

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
@@ -15,10 +15,12 @@ const Projects = () => {
   const [repos, setRepos] = useState([]);
 
   const handleSetRepos = (newObject) => {
-    setRepos(...repos, newObject);
+    setRepos([...repos, newObject]);
   }
 
-  ApiCall(handleSetRepos);
+  useEffect(() => {
+    ApiCall(handleSetRepos)
+  }, [])
 
   const navigate = useNavigate();
   

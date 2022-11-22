@@ -1,23 +1,32 @@
-import { data } from "autoprefixer";
-
-const ApiCall = () => {
-  const queryString =
-    "q=" + encodeURIComponent("portfolio in:topics user:mikef80");
+const ApiCall = (stuff) => {
+  const baseURL = `https://api.github.com/search/repositories?q=`;
+  const queryString = encodeURIComponent("portfolio in:topics user:mikef80");
 
   let items = [];
 
-  try {
-    fetch(`https://api.github.com/search/repositories?${queryString}`)
-      .then((response) => response.json())
-      /* .then((data) => {
-        let repos = data;
+  // console.log('props:' + setState);
 
-        repos.map((repo) => {
-          items.push({ name: repo.name,  });
-        });
-      }); */
+  try {
+    fetch(baseURL + queryString)
+      .then(response => response.json())
+    // .then(result => console.log(result.items[0]))
+      .then(result => {
+        let array = result.items;
+        array.forEach(item => {
+          let object = {
+            name: item.name,
+            url: item.html_url,
+            description: item.description
+          }
+          // console.log(object);
+          // stuff(object)
+          console.log(object);
+          stuff(object)
+      })
+      })
+    
   } catch (error) {
-    console.log(error);
+    console.log(`error: ${error}`);
   }
 };
 

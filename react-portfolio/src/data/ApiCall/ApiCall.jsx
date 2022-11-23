@@ -19,12 +19,13 @@ const ApiCall = (stuff) => {
           };
 
           // console.log(object);
-          items.push(object)
+          // items.push(object)
+          stuff(object);
         });
 
         console.log(items);
+        // stuff(items);
       })
-      .then(console.log(typeof stuff))
     
   } catch (error) {
     console.log(`error: ${error}`);

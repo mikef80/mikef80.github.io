@@ -16,10 +16,10 @@ function App() {
       <Header />
       <main className="px-3 pb-3">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="*" element={<Error />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact/:email" element={<Contact />} />
-          <Route path="*" element={<Error />} />
+          <Route path="/" element={<Home />} />
         </Routes>
       </main>
       <footer>&copy; 2022 Mike Francis</footer>

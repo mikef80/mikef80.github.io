@@ -8,7 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-// import ApiCall from "../../data/ApiCall/ApiCall";
+import ApiCall from "../../data/ApiCall/ApiCall";
 
 
 const Projects = () => {
@@ -16,79 +16,27 @@ const Projects = () => {
 
   const handleSetRepos = (newObject) => {
     setRepos(repos => [...repos, newObject]);
-  }
-
-
-
-
-
-
-  const ApiCall = (stuff) => {
-    const baseURL = `https://api.github.com/search/repositories?q=`;
-    const queryString = encodeURIComponent("portfolio in:topics user:mikef80");
-  
-    let items = [];
-  
-    try {
-      fetch(baseURL + queryString)
-        .then(response => response.json())
-        .then(result => {
-          let array = result.items;
-          // console.log(array);
-          array.forEach(item => {
-  
-            let object = {
-              name: item.name,
-              description: item.description,
-              url: item.svn_url
-            };
-  
-            // console.log(object);
-            // items.push(object)
-            handleSetRepos(object);
-          });
-  
-          // console.log(items);
-          // stuff(items);
-        })
-      
-    } catch (error) {
-      console.log(`error: ${error}`);
-    }
   };
-
-
-
-
-
-
-
-
-
 
   useEffect(() => {
     ApiCall()
-  }, [])
+      .then(response => {
+        response.items.forEach(item => handleSetRepos(item));
+      });
+  }, []);
 
   const navigate = useNavigate();
-  
+
   return (
     <Swiper
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
-      spaceBetween={10}
-      slidesPerView={1}
+      modules={ [Navigation, Pagination, Scrollbar, A11y] }
+      spaceBetween={ 10 }
+      slidesPerView={ 1 }
       navigation
-      pagination={{ clickable: true }}
-      onSlideChange={() => console.log("slide change")}
-      onSwiper={(swiper) => console.log(swiper)}
+      pagination={ { clickable: true } }
+      onSlideChange={ () => console.log("slide change") }
+      onSwiper={ (swiper) => console.log(swiper) }
     >
-      <SwiperSlide>
-        <ProjectCard
-          title="Project"
-          img="https://images.unsplash.com/photo-1661961110372-8a7682543120?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80"
-          text="This is the project description"
-        />
-      </SwiperSlide>
       <SwiperSlide>
         <ProjectCard
           title="Project2"

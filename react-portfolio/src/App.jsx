@@ -7,10 +7,8 @@ import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
 import Error from "./components/Error/Error";
 import Header from "./components/Header/Header";
-// import ApiCall from "./data/ApiCall/ApiCall";
 
 function App() {
-  // ApiCall();
   return (
     <Router>
       <Header />

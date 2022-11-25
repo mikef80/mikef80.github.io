@@ -21,8 +21,8 @@ const Projects = () => {
   useEffect(() => {
     ApiCall()
       .then(response => {
-        response.items.forEach(item => handleSetRepos(item));
-      });
+        response.forEach(item => handleSetRepos(item));
+      })
   }, []);
 
   const navigate = useNavigate();
@@ -35,7 +35,7 @@ const Projects = () => {
       navigation
       pagination={ { clickable: true } }
       onSlideChange={ () => console.log("slide change") }
-      onSwiper={ (swiper) => console.log(swiper) }
+      // onSwiper={ (swiper) => console.log(swiper) }
     >
       <SwiperSlide>
         <ProjectCard

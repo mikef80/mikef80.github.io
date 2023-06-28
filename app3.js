@@ -103,7 +103,9 @@ const getRepos = async () => {
     // encodeURIComponent("CA in:name");
   // const url = `https://api.github.com/search/repositories?q=user:mikef80+CA+in:name+sort:updated`;
   // const url = `https://api.github.com/search/repositories?q=user:mikef80+sort:updated+name:repoName`; //THIS ONE WORKS
-  const url = `https://api.github.com/search/repositories?${queryString}+sort:updated`;
+  // const url = `https://api.github.com/search/repositories?q=user:mikef80 portfolio NOT CA in:name+sort:updated`;
+  const url = `https://api.github.com/search/repositories?q=user:mikef80+portfolio%20in:topics+sort:updated`;
+  // https://api.github.com/search/repositories?${queryString}+sort:updated
   /* const url = {
         url: `https://api.github.com/search/repositories?q=user:mikef80+CA+in:name+sort:updated`,
         headers: {

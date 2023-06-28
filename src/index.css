@@ -2,3 +2,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.section-header::before {
+  content: '<';
+}
+
+.section-header::after {
+  content: ' />';
+}

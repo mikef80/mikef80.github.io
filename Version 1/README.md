@@ -1,1 +1,0 @@
-# This is my first big portfolio project, combing HTML, CSS and JS

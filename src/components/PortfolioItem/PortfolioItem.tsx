@@ -1,7 +1,9 @@
 const PortfolioItem = (item) => {
   console.log('====================================');
-  console.log(item.item.name);
+  console.log(item.item);
   console.log('====================================');
+
+  const { name } = item.item;
 
   return (
     <div className="border-[1px] border-black rounded-md p-4 lg:w-1/4">
